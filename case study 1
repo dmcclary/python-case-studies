@@ -1,0 +1,56 @@
+#What is the output of the following code?
+'''nums=set([1,1,2,3,3,3,4,4])
+print(len(nums))
+4
+'''
+#What will be the output?
+'''d= {"john":40,"peter":45 }
+print(list(d.keys()))
+#['john, peter']
+'''
+#A website requires a user to input username and password to register. Write a program to check the validity of password given by user. Following are the criteria for checking password
+'''1. At least 1 letter between [a-z]
+2. At least 1 number between [0-9]1. At least 1 letter between [A-Z]
+3. At least 1 character from [$#@]
+4. Minimum length of transaction password: 6
+5. Maximum length of transaction password: 12
+'''
+'''import re
+
+def check_password_validity(password):
+    # Check the length of the password
+    if len(password) < 6 or len(password) > 12:
+        return "Password should be between 6 and 12 characters long."
+
+    # Check if there is at least one lowercase letter
+    if not re.search(r"[a-z]", password):
+        return "Password should contain at least one letter between [a-z]."
+
+    # Check if there is at least one uppercase letter
+    if not re.search(r"[A-Z]", password):
+        return "Password should contain at least one letter between [A-Z]."
+
+    # Check if there is at least one digit
+    if not re.search(r"[0-9]", password):
+        return "Password should contain at least one number between [0-9]."
+
+    # Check if there is at least one special character from [$#@]
+    if not re.search(r"[$#@]", password):
+        return "Password should contain at least one character from [$#@]."
+
+    return "Password is valid."
+
+# Input username and password
+username = input("Enter username: ")
+password = input("Enter password: ")
+
+# Check the validity of the password
+result = check_password_validity(password)
+print(result)
+'''
+'''# Write a for loop that prints all elements of a list and their position in the list
+a = [4, 7, 3, 2, 5, 9]
+
+for index, value in enumerate(a):
+    print(f"Element at position {index} is {value}")
+'''''
